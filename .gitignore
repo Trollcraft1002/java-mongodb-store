@@ -1,3 +1,4 @@
+HELP.md
 .gradle
 **/build/
 !src/**/build/
@@ -10,12 +11,45 @@ gradle-app.setting
 
 # Avoid ignore Gradle wrappper properties
 !gradle-wrapper.properties
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 # Cache of project
 .gradletasknamecache
 
 # Eclipse Gradle plugin generated files
 # Eclipse Core
+### STS ###
+.apt_generated
+.classpath
+.factorypath
 .project
 # JDT-specific (Eclipse Java Development Tools)
 .classpath
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
