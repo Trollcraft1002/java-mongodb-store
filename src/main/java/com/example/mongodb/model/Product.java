@@ -12,16 +12,18 @@ private String id;
     private String name;
     private double price;
     private int quantity;
+    private String description;
     private String categoryId;  // Link to the Category entity
     private String supplierId;  // Link to the Supplier entity
     private String imageUrl;
 
 
-    public Product(String id, String name, double price, int quantity, String categoryId, String supplierId, String imageUrl) {
+    public Product(String id, String name, double price, int quantity,String description, String categoryId, String supplierId, String imageUrl) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
+        this.description = description;
         this.categoryId = categoryId;
         this.supplierId = supplierId;
         this.imageUrl = imageUrl;
