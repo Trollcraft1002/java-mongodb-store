@@ -2,6 +2,7 @@ HELP.md
 .gradle
 **/build/
 !src/**/build/
+resources/application.properties
 
 # Ignore Gradle GUI config
 gradle-app.setting
