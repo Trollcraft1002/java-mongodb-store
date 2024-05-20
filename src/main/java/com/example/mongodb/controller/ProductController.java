@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-    @RequestMapping("/api/products")
+@RequestMapping("/api/products")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ProductController {
 
     private final ProductService productService;
@@ -37,6 +38,11 @@ public class ProductController {
     Product createdProduct = productService.saveProduct(product);
     return new ResponseEntity<>(createdProduct, HttpStatus.CREATED);
     }
+//    @GetMapping("/search")
+//    public Product getProductByName(@RequestParam String name) {
+//        return productService.getProductByName(name)
+//                .orElseThrow(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+//    }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Product> deleteProductById(@PathVariable String id) {
