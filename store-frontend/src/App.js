@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ProductCard from './components/ProductCard';
-import { Container, Grid } from '@mui/material';
+import ProductTable from './components/ProductTable';
+import { Container } from '@mui/material';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -26,19 +26,17 @@ const App = () => {
     }
   };
 
+  const handleAddProduct = () => {
+    // Logic to open a modal or navigate to a new page to add a product
+  };
+
   useEffect(() => {
     fetchProducts();
   }, []);
 
   return (
     <Container>
-      <Grid container spacing={4}>
-        {products.map((product) => (
-          <Grid item key={product.id} xs={12} sm={6} md={4}>
-            <ProductCard product={product} onDelete={deleteProduct} />
-          </Grid>
-        ))}
-      </Grid>
+      <ProductTable products={products} onDelete={deleteProduct} onAddProduct={handleAddProduct} />
     </Container>
   );
 };
