@@ -1,8 +1,6 @@
 package com.example.mongodb.controller;
 
-import com.example.mongodb.model.Product;
 import com.example.mongodb.model.Supplier;
-import com.example.mongodb.repository.SupplierRepository;
 import com.example.mongodb.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

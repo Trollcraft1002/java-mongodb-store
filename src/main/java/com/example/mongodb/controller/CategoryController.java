@@ -1,7 +1,6 @@
 package com.example.mongodb.controller;
 
 import com.example.mongodb.model.Category;
-import com.example.mongodb.model.Product;
 import com.example.mongodb.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("api/categories")
