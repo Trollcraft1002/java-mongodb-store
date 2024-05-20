@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface SupplierService {
     List<Supplier> getAllSuppliers();
-    Optional<Supplier> getSupplier(String id);
+    Optional<Supplier> getSupplierById(String id);
     Supplier saveSupplier(Supplier supplier);
-    void deleteSupplier(String id);
+    void deleteSupplierById(String id);
 }

@@ -22,7 +22,7 @@ public class SupplierServiceImpl implements SupplierService {
     }
 
     @Override
-    public Optional<Supplier> getSupplier(String id) {
+    public Optional<Supplier> getSupplierById(String id) {
         return supplierRepository.findById(id);
     }
 
@@ -32,7 +32,7 @@ public class SupplierServiceImpl implements SupplierService {
     }
 
     @Override
-    public void deleteSupplier(String id) {
+    public void deleteSupplierById(String id) {
         supplierRepository.deleteById(id);
     }
 }
