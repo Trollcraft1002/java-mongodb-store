@@ -7,7 +7,7 @@ import { Container } from '@mui/material';
 
 const App = () => {
   const [products, setProducts] = useState([]);
-
+  //const [suppliers, setSuppliers] = useState([])
   const fetchProducts = async () => {
     try {
       const response = await axios.get('http://localhost:8080/api/products');
@@ -16,6 +16,18 @@ const App = () => {
       console.error('Error fetching products:', error);
     }
   };
+
+  //testing supplier api
+
+  // const fetchSuppliers = async() => {
+  //   try{
+  //     const response = await axios.get("http://localhost:8080/api/suppliers")
+  //     setSuppliers(response.data)
+  //   }catch (err){
+  //     console.log(`Error fetching suppliers : ${err}`)
+  //   }
+  // }
+
 
   const deleteProduct = async (id) => {
     try {
